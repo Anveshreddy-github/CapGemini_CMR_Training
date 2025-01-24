@@ -1,0 +1,5 @@
+f=input("enter ur first name:")
+l=input("ente ur last name:")
+pincode=input("enter ur pincode:")
+address=input("enter ur address:")
+print(f"hello {f}{l} ur pincode is {pincode} and ur address is {address}")
