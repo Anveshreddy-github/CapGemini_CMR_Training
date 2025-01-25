@@ -1,4 +1,4 @@
-import math
+import math 
 def is_prime(num):
     if num <= 1:
         return False
@@ -18,4 +18,3 @@ print("enter only Positive numbers which are > 0")
 start = int(input("Enter the start number : "))
 end = int(input("Enter the end number: "))
 print(f" {prime_numbers_between(start, end)}")
-
