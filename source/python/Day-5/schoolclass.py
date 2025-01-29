@@ -5,7 +5,6 @@ class Student:
         self.age = age
         self.s_id = s_id
 
-    # Getter methods
     def get_name(self):
         return self.name
 
@@ -31,7 +30,7 @@ class Student:
     def set_s_id(self, s_id):
         self.s_id = s_id
 
-# Function to take input and create a Student object
+
 def create_student():
     name = input("Enter name: ")
     gender = input("Enter gender: ")
@@ -39,7 +38,7 @@ def create_student():
     s_id = input("Enter student ID: ")
     return Student(name, gender, age, s_id)
 
-# Example usage
+
 student = create_student()
 print(f"Student Name: {student.get_name()}")
 print(f"Student Gender: {student.get_gender()}")
