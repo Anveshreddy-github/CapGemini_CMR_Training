@@ -1,34 +1,5 @@
-class Customer:
-    def __init__(self, customer_id, name, email):
-        self.customer_id = customer_id
-        self.name = name
-        self.email = email
-
-    def get_customer_info(self):
-        return {"Customer ID": self.customer_id, "Name": self.name, "Email": self.email}
-
-class Order:
-    def __init__(self, order_id):
-        self.order_id = order_id
-        self.items = []
-
-    def add_item(self, item):
-        self.items.append(item)
-
-    def get_order_details(self):
-        return {"Order ID": self.order_id, "Items": [item.get_item_details() for item in self.items]}
-
-
-class OrderItem(Order):
-    def __init__(self, order_id, item_name, quantity, price):
-        super().__init__(order_id)
-        self.item_name = item_name
-        self.quantity = quantity
-        self.price = price
-
-    def get_item_details(self):
-        return {"Item": self.item_name, "Quantity": self.quantity, "Price": self.price}
-
+from customer import Customer
+from orders import Order, OrderItem
 class CustomerOrder(Customer, Order):
     def __init__(self, customer_id, name, email, order_id):
         Customer.__init__(self, customer_id, name, email)
@@ -88,3 +59,4 @@ transaction[customer_order.order_id] = customer_order.get_full_order_details()
 # Print the Transaction
 print("\nFinal Transaction Details:")
 print(transaction)
+
