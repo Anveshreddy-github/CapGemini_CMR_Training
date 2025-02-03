@@ -1,34 +1,34 @@
-import threading
-import requests
+# import threading
+# #import requests
 
-def fetch_url(url, results):
-    response = requests.get(url)
-    html_content = response.text  # Get the HTML content as a string
-    results.append(f"Fetched {url}:\n{html_content}\n")
+# def fetch_url(url, results):
+#     #response = requests.get(url)
+#     #html_content = response.text  # Get the HTML content as a string
+#     results.append(f"Fetched {url}:\n{html_content}\n")
 
-urls = [
-    #"https://example.com",
-#      "https://www.python.org",
-      #"https://www.github.com",
-    #"https://www.zomato.com/",
-    # "https://www.youtube.com/"
-    "https://www.cmrcetexaminations.com/beeserp/login.aspx"
- ]
+# urls = [
+#     #"https://example.com",
+# #      "https://www.python.org",
+#       #"https://www.github.com",
+#     #"https://www.zomato.com/",
+#     # "https://www.youtube.com/"
+#     "https://www.cmrcetexaminations.com/beeserp/login.aspx"
+#  ]
 
-threads = []
-results = []
+# threads = []
+# results = []
 
-for url in urls:
-    thread = threading.Thread(target=fetch_url, args=(url, results))
-    threads.append(thread)
-    thread.start()
+# for url in urls:
+#     thread = threading.Thread(target=fetch_url, args=(url, results))
+#     threads.append(thread)
+#     thread.start()
 
-for thread in threads:
-    thread.join()
+# for thread in threads:
+#     thread.join()
 
-# Display results in the console after all threads are done
-for result in results:
-    print(result)
+# # Display results in the console after all threads are done
+# for result in results:
+#     print(result)
 
-print("All URLs fetched")
+# print("All URLs fetched")
  
